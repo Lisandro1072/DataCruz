@@ -1,0 +1,94 @@
+/* src/styles/Login.css */
+.login-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.login-container h2 {
+  color: var(--color-primary);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.google-login {
+  margin-top: 10px;
+  background-color: #db4437;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.google-login:hover, .login-form button:hover {
+  opacity: 0.8;
+}
+
+/* Sección para el enlace de registro */
+.register-section {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.register-section p {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+.register-section a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-section a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para mensajes de éxito y error */
+.message {
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

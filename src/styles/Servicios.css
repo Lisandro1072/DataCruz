@@ -1,0 +1,55 @@
+.servicios-section {
+    padding: 3rem 2rem;
+    background-color: #0e0e11;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .titulo-servicios {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #b48afd;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #7f5af0;
+  }
+  
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .servicio-card {
+    background: #1a1a1d;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(127, 90, 240, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .servicio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(127, 90, 240, 0.35);
+    border-color: #7f5af0;
+  }
+  
+  .icono-servicio {
+    font-size: 2.8rem;
+    color: #7f5af0;
+    margin-bottom: 1rem;
+  }
+  
+  .servicio-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+  }
+  
+  .servicio-card p {
+    color: #bfbfbf;
+    font-size: 1rem;
+  }
+  

@@ -1,0 +1,8 @@
+/* src/styles/Footer.css */
+
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem;
+}
