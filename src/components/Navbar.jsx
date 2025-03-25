@@ -1,5 +1,5 @@
 // src/components/Navbar.jsx
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../firebaseConfig";
 import { onAuthStateChanged, signOut } from "firebase/auth";
@@ -9,6 +9,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [user, setUser] = useState(null);
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -19,6 +20,17 @@ const Navbar = () => {
       setUser(currentUser);
     });
     return () => unsubscribe();
+  }, []);
+
+  // Cerrar el dropdown al hacer clic fuera
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleLogout = async () => {
@@ -46,7 +58,7 @@ const Navbar = () => {
             <Link to="/register" className="btn-solid">Registrarse</Link>
           </div>
         ) : (
-          <div className="user-menu">
+          <div className="user-menu" ref={dropdownRef}>
             <button onClick={toggleDropdown} className="user-btn">
               {user.displayName || user.email}
             </button>

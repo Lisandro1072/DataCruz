@@ -13,8 +13,10 @@ import Register from "./pages/Register"; // Importar el registro
 import Perfil from "./pages/Perfil";
 import Terminos from './pages/Terminos';
 import Privacidad from './pages/Privacidad';
-import Cookies from './pages/Cookies';
+import Cookies from './pages/Cookies'
+import ScrollToTop from "./components/ScrollToTop";
 import "./App.css";
+
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
         <Route path="/terminos" element={<Terminos />} />
         <Route path="/privacidad" element={<Privacidad />} />
         <Route path="/cookies" element={<Cookies />} />
-        
+        <Route path="/scroll-to-top" element={<ScrollToTop />} />
       </Routes>
       </div>
       <Footer />
