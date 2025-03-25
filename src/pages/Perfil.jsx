@@ -60,7 +60,7 @@ const Perfil = () => {
   };
 
   return (
-    <div className="perfil-container">
+    <div className="perfil-container" data-aos="zoom-in" data-aos-duration="1000">
       <h2>Perfil del Usuario</h2>
 
       {message.text && <div className={`message ${message.type}`}>{message.text}</div>}

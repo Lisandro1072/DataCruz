@@ -11,6 +11,9 @@ import Contacto from "./pages/Contacto";
 import Login from "./pages/Login";
 import Register from "./pages/Register"; // Importar el registro
 import Perfil from "./pages/Perfil";
+import Terminos from './pages/Terminos';
+import Privacidad from './pages/Privacidad';
+import Cookies from './pages/Cookies';
 import "./App.css";
 
 function App() {
@@ -25,6 +28,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} /> {/* Nueva ruta */}
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/terminos" element={<Terminos />} />
+        <Route path="/privacidad" element={<Privacidad />} />
+        <Route path="/cookies" element={<Cookies />} />
         
       </Routes>
       </div>

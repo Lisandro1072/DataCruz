@@ -1,20 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../styles/Contacto.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contacto = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="contact-container">
-      <h2 className="contact-title">¿Tienes alguna duda o consulta?</h2>
-      <p className="contact-subtitle">Nuestro equipo está listo para ayudarte</p>
+      <h2 className="contact-title" data-aos="fade-down">¿Tienes alguna duda o consulta?</h2>
+      <p className="contact-subtitle" data-aos="fade-up">Nuestro equipo está listo para ayudarte</p>
 
-      <form className="contact-form">
+      <form className="contact-form" data-aos="zoom-in">
         <input type="text" placeholder="Nombre completo" required />
         <input type="email" placeholder="Correo electrónico" required />
         <textarea placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
         <button type="submit">Enviar mensaje</button>
       </form>
 
-      <div className="contact-info">
+      <div className="contact-info" data-aos="fade-up" data-aos-delay="300">
         <div>
           <h3>📍 Dirección</h3>
           <p>La Paz, Bolivia</p>

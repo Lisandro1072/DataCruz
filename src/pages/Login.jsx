@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <div className="auth-container">
-      <div className="auth-box login-box">
+      <div className="auth-box login-box" data-aos="fade-up" data-aos-duration="1000">
         <h2>Bienvenido</h2>
         <form onSubmit={loginUser}>
           <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />

@@ -74,3 +74,26 @@ button:hover, .btn:hover {
   transform: scale(1.02);
   box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
 }
+.btn-solid {
+  background: linear-gradient(135deg, #6a0dad, #8a2be2);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-solid:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7c33ff, #a463ff);
+}
+
+.perfil-container,
+.auth-box,
+.footer,
+.navbar-dark {
+  background-color: #111111;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.15);
+}
