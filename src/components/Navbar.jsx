@@ -42,9 +42,10 @@ const Navbar = () => {
   return (
     <nav className="navbar-dark" data-aos="fade-down">
       <div className="navbar-container">
-        <Link to="/" className="logo">
-          <img src="/logo.svg" alt="Logo" className="logo-icon" />
-        </Link>
+      <Link to="/" className="logo">
+          <img src="/images/logo.jpg" alt="Logo" className="logo-icon" />
+      </Link>
+
 
         <div className={`nav-links ${menuOpen ? "open" : ""}`}>
           <Link to="/" onClick={() => setMenuOpen(false)}>Inicio</Link>

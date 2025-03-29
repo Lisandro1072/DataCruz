@@ -14,9 +14,26 @@ const Inicio = () => {
       {/* Hero */}
       <section className="hero-section" data-aos="fade-up">
         <div className="hero-content">
-          <h1>La herramienta inteligente para gestionar tus proyectos de construcción</h1>
-          <p>Centraliza presupuestos, materiales, formatos y más. Todo en un solo lugar.</p>
+          <h1>DataCruz: la plataforma inteligente para la construcción moderna</h1>
+          <p>Gestiona tus proyectos con precisión, actualizaciones en tiempo real y herramientas automatizadas.</p>
           <Link to="/register" className="btn-primary">Comienza gratis</Link>
+        </div>
+      </section>
+
+      {/* Sobre Nosotros */}
+      <section className="about-section" data-aos="fade-up">
+        <div className="about-content">
+          <h2>¿Quiénes somos?</h2>
+          <p>
+            En <strong>DataCruz</strong> transformamos la forma en que los profesionales de la construcción acceden y gestionan la información crítica para sus proyectos.
+            Nuestro objetivo es centralizar datos como precios de materiales, mano de obra, herramientas y formatos técnicos, todo en una plataforma segura y fácil de usar.
+          </p>
+          <p>
+            Nuestra misión es empoderar a arquitectos, ingenieros, constructores y proveedores para tomar decisiones rápidas, rentables y basadas en información actualizada.
+          </p>
+          <p>
+            Ya seas parte de una gran empresa o una constructora local, en <strong>DataCruz</strong> tienes una herramienta diseñada para crecer contigo.
+          </p>
         </div>
       </section>
 
@@ -24,16 +41,19 @@ const Inicio = () => {
       <section className="benefits-section" data-aos="fade-right">
         <h2>¿Por qué usar nuestra plataforma?</h2>
         <div className="benefits-grid">
-          <div className="benefit-card" data-aos="zoom-in">
+          <div className="benefit-card" data-aos="fade-up">
+            <img src="/images/imagen1.jpg" alt="Automatización" className="benefit-img" />
             <h3>Automatización</h3>
             <p>Reduce tiempo gestionando documentos, cálculos y cotizaciones.</p>
           </div>
-          <div className="benefit-card" data-aos="zoom-in" data-aos-delay="150">
+          <div className="benefit-card" data-aos="fade-up" data-aos-delay="100">
+            <img src="/images/actualizacion.jpg" alt="Actualización en Tiempo Real" className="benefit-img" />
             <h3>Actualización en Tiempo Real</h3>
             <p>Accede a precios y datos actualizados constantemente.</p>
           </div>
-          <div className="benefit-card" data-aos="zoom-in" data-aos-delay="300">
-            <h3>Acceso desde Cualquier Dispositivo</h3>
+          <div className="benefit-card" data-aos="fade-up" data-aos-delay="200">
+            <img src="/images/acceso.jpg" alt="Acceso desde cualquier dispositivo" className="benefit-img" />
+            <h3>Acceso desde cualquier dispositivo</h3>
             <p>Usa la plataforma desde tu móvil, tablet o computadora.</p>
           </div>
         </div>
