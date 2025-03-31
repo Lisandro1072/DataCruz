@@ -1,0 +1,19 @@
+.btn-volver-admin {
+    background: linear-gradient(90deg, #7f3df8, #a55afc);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 1rem 2rem;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(168, 89, 255, 0.5);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-volver-admin:hover {
+    transform: scale(1.03);
+    background: linear-gradient(90deg, #9958f7, #c47cfc);
+  }
+  

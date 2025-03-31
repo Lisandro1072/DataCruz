@@ -10,11 +10,18 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const loginUser = async (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/");
+      const cred = await signInWithEmailAndPassword(auth, email, password);
+      const user = cred.user;
+
+      // Redirección según tipo de usuario
+      if (user.email === "lisandrotintaya@datacruz.com") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       alert("Error al iniciar sesión: " + error.message);
     }
@@ -23,8 +30,14 @@ const Login = () => {
   const loginWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     try {
-      await signInWithPopup(auth, provider);
-      navigate("/");
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+
+      if (user.email === "lisandrotintaya@datacruz.com") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
     } catch (error) {
       alert("Error con Google: " + error.message);
     }
@@ -34,13 +47,29 @@ const Login = () => {
     <div className="auth-container">
       <div className="auth-box login-box" data-aos="fade-up" data-aos-duration="1000">
         <h2>Bienvenido</h2>
-        <form onSubmit={loginUser}>
-          <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required />
-          <input type="password" placeholder="Contraseña" value={password} onChange={e => setPassword(e.target.value)} required />
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
           <button type="submit">Iniciar sesión</button>
         </form>
-        <button className="google-btn" onClick={loginWithGoogle}>Ingresar con Google</button>
-        <p>¿No tienes una cuenta? <a href="/register">Regístrate</a></p>
+        <button className="google-btn" onClick={loginWithGoogle}>
+          Ingresar con Google
+        </button>
+        <p>
+          ¿No tienes una cuenta? <a href="/register">Regístrate</a>
+        </p>
       </div>
     </div>
   );

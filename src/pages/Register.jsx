@@ -17,11 +17,15 @@ const Register = () => {
     e.preventDefault();
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
+
       await setDoc(doc(db, "users", cred.user.uid), {
         nombre,
         compania,
-        email
+        email,
+        rol: "usuario",         // por defecto
+        suspendido: false       // por defecto
       });
+
       navigate("/");
     } catch (error) {
       alert("Error al registrar: " + error.message);
@@ -30,7 +34,7 @@ const Register = () => {
 
   return (
     <div className="auth-container">
-      <div className="auth-box register-box" data-aos="fade-up" data-aos-duration="1000">
+      <div className="auth-box register-box">
         <h2>Crea una cuenta</h2>
         <form onSubmit={registerUser}>
           <input type="text" placeholder="Nombre completo" value={nombre} onChange={e => setNombre(e.target.value)} required />

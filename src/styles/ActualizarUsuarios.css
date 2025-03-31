@@ -1,0 +1,26 @@
+.actualizar-container {
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .actualizar-container.cargando .estado-texto {
+    color: #cfcfcf;
+    animation: pulse 1s infinite;
+  }
+  
+  .actualizar-container.éxito .estado-texto {
+    color: #7dff9f;
+  }
+  
+  .actualizar-container.error .estado-texto {
+    color: #ff7676;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
